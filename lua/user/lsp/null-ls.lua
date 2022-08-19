@@ -15,6 +15,9 @@ null_ls.setup({
     formatting.black.with({ extra_args = { "--fast" } }),
     formatting.stylua,
     -- diagnostics.flake8
-    diagnostics.eslint_d
+    diagnostics.eslint_d.with({
+      filetypes = { "javascript", "javascriptreact", "typescript", "typescriptreact", "vue", "svelte", "css", "scss", "module.scss",
+        "html", "json", "yaml", "markdown" }
+    }),
   },
 })
